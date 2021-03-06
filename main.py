@@ -1,7 +1,8 @@
 import data_handler as dh
 
 if __name__ == '__main__':
-    rics = ['EA.O']
+    """
+    rics = ['ERICb.ST']
     start_date = '2021-01-01'
     end_date = '2021-02-26'
     fields = ['TRDPRC_1']
@@ -10,4 +11,7 @@ if __name__ == '__main__':
         end_date,
         rics, fields,
         count=0)
-    print(df.head())
+    """
+
+    df = dh.read_csv('RDP_hist_close.csv')
+    print(df)
