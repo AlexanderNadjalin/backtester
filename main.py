@@ -15,7 +15,7 @@ if __name__ == '__main__':
     """
 
     df = dh.read_csv('RDP_hist_close.csv')
-    pf = port('A1', 10000)
+    pf = port('A1', 10000, broker='Avanza')
     pf.transact_position('B', 'EA.O', 100, 20, verbose=True)
     pf.transact_position('B', 'EA.O', 100, 20, verbose=True)
     pf.transact_position('B', 'PLTR.K', 10, 40,verbose=True)
@@ -26,3 +26,4 @@ if __name__ == '__main__':
     print(pf.positions)
     print(pf.current_cash)
     print(pf.transactions)
+    print(pf.acc_tc)
