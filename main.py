@@ -1,4 +1,5 @@
 import data_handler as dh
+from portfolio import Portfolio as port
 
 if __name__ == '__main__':
     """
@@ -14,4 +15,14 @@ if __name__ == '__main__':
     """
 
     df = dh.read_csv('RDP_hist_close.csv')
-    print(df)
+    pf = port('A1', 10000)
+    pf.transact_position('B', 'EA.O', 100, 20, verbose=True)
+    pf.transact_position('B', 'EA.O', 100, 20, verbose=True)
+    pf.transact_position('B', 'PLTR.K', 10, 40,verbose=True)
+
+    pf.transact_position('S', '.SPX', 11, 44, verbose=True)
+    pf.transact_position('S', '.SPX', 1, 45, verbose=True)
+
+    print(pf.positions)
+    print(pf.current_cash)
+    print(pf.transactions)
