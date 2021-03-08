@@ -4,7 +4,7 @@ from loguru import logger
 class Portfolio:
     """
 
-
+    Portfolio class to hold positions and cash.
     """
     def __init__(self,
                  name: str,
@@ -20,8 +20,10 @@ class Portfolio:
         self.acc_tc = 0
         self.broker = broker
 
+        # Positions as dictionary {identifier: number of shares}.
         self.positions = {}
 
+        # Store all transactions in list.
         self.transactions = []
 
     def transact_position(self,
